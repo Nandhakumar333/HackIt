@@ -54,7 +54,7 @@
   border-width: 27px;
   position: absolute;
   border-style: solid;
-  top: 110px;
+  top: 95px;
 }
 @media only screen and (max-width: 600px) {
   #student-nav::after {
@@ -95,7 +95,7 @@ th {
   border-width: 30px;
   position: absolute;
   border-style: solid;
-  top: 112px;
+  top: 95px;
 }
 @media only screen and (max-width: 600px) {
   #table-div::before {
