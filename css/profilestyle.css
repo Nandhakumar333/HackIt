@@ -199,21 +199,11 @@
   color: white;
   background-color: black;
 }
-table {
-  border-collapse: collapse;
-  border: 2px solid black;
-}
-table,
-td,
-th {
-  border: 2px solid black;
-  border-radius: 50px;
-}
 #table-div {
   border: 2px solid black;
   border-radius: 25px;
   overflow-y: auto;
-  height: 420px;
+  height: 75vh;
   width: 100%;
 }
 ::-webkit-scrollbar {
@@ -287,5 +277,67 @@ th {
     position: absolute;
     border-style: solid;
     top: 92px;
+  }
+}
+#profile-box {
+  border: 2px solid black;
+  border-radius: 25px;
+}
+#details-box {
+  border: 2px solid black;
+  border-radius: 25px;
+}
+#profile-title {
+  border: 2px solid black;
+  border-radius: 25px;
+}
+#profile-content {
+  display: inline-block;
+  padding: 10px;
+  border: 2px solid lightblue;
+  width: 200px;
+}
+@media only screen and (max-width: 600px) {
+  #profile-content {
+    display: block;
+    border: none;
+  }
+}
+@media only screen and (min-width: 600px) {
+  #profile-content {
+    display: block;
+    border: none;
+    font-size: 15px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #profile-content {
+    display: block;
+    border: none;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #profile-content {
+    display: block;
+    border: none;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #profile-content {
+    display: inline-block;
+    padding: 10px;
+    border: 2px solid blue;
+    width: 200px;
+    border-radius: 25px;
+  }
+}
+#profile-details {
+  border: 2px solid black;
+  border-radius: 10px;
+}
+@media only screen and (max-width: 600px) {
+  #profile-details {
+    border: none;
+    font-size: medium;
   }
 }
