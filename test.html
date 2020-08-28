@@ -13,7 +13,7 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./css/profilestyle.css" />
+    <link rel="stylesheet" href="./css/testsection.css" />
   </head>
   <body>
     <div class="container-fluid">
@@ -81,53 +81,11 @@
         <div class="col-sm-10 col-md-10 col-lg-10 col-xl-10 text-center">
           <div class="row text-center">
             <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-12">
-              <h4  id="profile-title">Profile</h4>
+              <h4  id="profile-title">Tests</h4>
             </div>
           </div>
             <div class="row p-4 text-center" id="table-div">
-              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 shadow p-4 mb-4 bg-white" id="profile-box">
-                <div class="row">
-                <div class="col-xl-1 col-lg-1 col-md-1 col-sm-2 col-12 text-center">
-                    <img class="rounded-circle mt-lg-4" alt="110x110" src="https://mdbootstrap.com/img/Photos/Avatars/img%20(31).jpg"
-                    width="110" height="110" data-holder-rendered="true">
-                </div>
-                <div class="col-xl-11 col-lg-11 col-md-11 col-sm-10 col-12">
-                  <div class="row mt-4">
-                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                      <h4 id="profile-content">Nandhakumar</h4>
-                    </div>
-                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12"><h4 id="profile-content">CSE</h4></div>
-                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 mt-xl-4 mt-lg-4 mt-md-4 mt-sm-4"><h4 id="profile-content">XXXXX</h4></div>
-                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 mt-xl-4 mt-lg-4 mt-md-4 mt-sm-4"><h4 id="profile-content">YYYY</h4></div>
-                  </div>
-                </div>
                 
-              </div>
-            </div>
-            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-2">
-
-           
-              <div class="row p-4 text-center shadow p-4 mb-4 bg-white" id="details-box">
-                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                  <h3>Details</h3>
-                </div>
-              <div class="col-xl-11 col-lg-11 col-md-11 col-sm-10 col-12">
-                  <div class="row ml-lg-4">
-                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-6">
-                    <h5 id="profile-details">Name</h5>
-                    </div>
-                    <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9 col-6"><h5 id="profile-details">Nandhakumar</h5></div>
-                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-6"><h5 id="profile-details">Department</h5></div>
-                    <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9 col-6"><h5 id="profile-details">CSE</h5></div>
-                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-6"><h5 id="profile-details">Department</h5></div>
-                    <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9 col-6"><h5 id="profile-details">CSE</h5></div>
-                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-6"><h5 id="profile-details">Department</h5></div>
-                    <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9 col-6"><h5 id="profile-details">CSE</h5></div>
-                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-6"><h5 id="profile-details">Department</h5></div>
-                    <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9 col-6"><h5 id="profile-details">CSE</h5></div>
-                  </div>
-                </div>
-              </div>
             </div>
             
         </div>
@@ -147,5 +105,14 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
+    <script>
+        let time=sessionStorage.getItem("Time");
+        let newtime=10000*time;
+        console.log(newtime);
+        // setTimeout(function(){
+        //     sessionStorage.removeItem("Time");
+        //     window.location="./testsection.html";
+        // },newtime-440000)
+    </script>
   </body>
 </html>
