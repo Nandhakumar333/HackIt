@@ -13,7 +13,7 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./css/testsection.css" />
+    <link rel="stylesheet" href="./css/test.css" />
   </head>
   <body>
     <div class="container-fluid">
@@ -85,6 +85,9 @@
             </div>
           </div>
             <div class="row p-4 text-center" id="table-div">
+              <div class="col-12">
+                <h3 class="float-xl-right float-lg-right float-md-right" id="clock"></h3>
+              </div>
                 
             </div>
             
@@ -106,9 +109,33 @@
       crossorigin="anonymous"
     ></script>
     <script>
-        let time=sessionStorage.getItem("Time");
+        let time=localStorage.getItem("Time");
         let newtime=10000*time;
         console.log(newtime);
+        let min=time;
+        let fulltime=2*60;
+        const display=document.getElementById('clock');
+
+        var control=setInterval(updatetime,1000);
+        //console.log(controltime);
+
+        function updatetime(){
+          let minutes=Math.floor(fulltime/60);
+          let second=fulltime%60;
+          if(second === 0){
+            if(minutes===0){
+            clearInterval(control);
+            
+            }
+          }
+
+          second=second<10?"0"+second:second;
+          minutes=minutes<10?"0"+minutes:minutes;
+          minutes<05?display.style.color="red":display.style.color="green";
+          display.innerHTML=`${minutes}:${second}`
+          fulltime--;
+        }
+        
         // setTimeout(function(){
         //     sessionStorage.removeItem("Time");
         //     window.location="./testsection.html";
