@@ -109,38 +109,69 @@
       crossorigin="anonymous"
     ></script>
     <script>
-        let time=localStorage.getItem("Time");
-        let newtime=10000*time;
-        console.log(newtime);
-        let min=time;
-        let fulltime=2*60;
-        const display=document.getElementById('clock');
+      let time=localStorage.getItem("Time");
+      let newtime=10000*time;
+      console.log(newtime);
+      let min=time;
+      let fulltime=1*10;
+      const display=document.getElementById('clock');
+      let c=0;
+      let _poller = null;
 
-        var control=setInterval(updatetime,1000);
-        //console.log(controltime);
+      const poll = () => {
+    const interval = 1000;
+  // let _poller = null;
 
-        function updatetime(){
+  return {
+    start: () => {
+      _poller = setInterval(updatetime, interval);
+    },
+    stop: () => {
+      console.log('Test paused.');
+      clearInterval(_poller);
+      c++;
+      alert("Tap Switching ="+c);
+    }
+  };
+};
+
+const poller = poll();
+poller.start();
+
+const onVisibilityChange = () => {
+  if (document.visibilityState === 'hidden') {
+    poller.stop();
+  } else {
+    poller.start();
+  }
+};
+
+document.addEventListener('visibilitychange', onVisibilityChange, false);
+
+    function updatetime(){
           let minutes=Math.floor(fulltime/60);
           let second=fulltime%60;
-          if(second === 0){
-            if(minutes===0){
-            clearInterval(control);
-              window.location.href="testsection.html";
-            
-            }
+          console.log("MIN="+minutes+"Sec="+second) 
+          if(minutes<=0){
+          if(second <= 0){
+            clearInterval(_poller);
+            second=0;
+            minutes=0;
           }
-
-          second=second<10?"0"+second:second;
-          minutes=minutes<10?"0"+minutes:minutes;
-          minutes<05?display.style.color="red":display.style.color="green";
-          display.innerHTML=`${minutes}:${second}`
-          fulltime--;
+          }
+            second=second<10?"0"+second:second;
+            minutes=minutes<10?"0"+minutes:minutes;
+            minutes<05?display.style.color="red":display.style.color="green";
+            display.innerHTML=`${minutes}:${second}`
+            fulltime--;
+            
         }
-        
-        // setTimeout(function(){
-        //     sessionStorage.removeItem("Time");
-        //     window.location="./testsection.html";
-        // },newtime-440000)
+
+
+
+
+
+
     </script>
   </body>
 </html>
